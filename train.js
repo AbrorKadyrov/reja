@@ -5,19 +5,17 @@ console.log("Train js ishga tushdi");
 function calculator(a, b, c) {
   if (b == "/" && c == 0) {
     return "not valid to operate";
-  } else if (a == 0 && c == 0) {
-    return "not valid to operate";
   } else if (b == "*") {
-    return `${a * c} `;
+    return a * c;
   } else if (b == "/") {
-    return `${a / c} `;
+    return a / c;
   } else if (b == "+") {
-    return `${a + c} `;
+    return a + c;
   } else if (b == "-") {
-    return `${a - c} `;
+    return a - c;
   }
 }
 
-const result = calculator(2, "*", 0);
+const result = calculator(0, "/", 0);
 
 console.log(result);
