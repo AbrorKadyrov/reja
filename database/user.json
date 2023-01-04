@@ -1,0 +1,50 @@
+{
+  "name": "Abror",
+  "profession": "Junior developer",
+  "age": 24,
+  "recidence": "S.Korea",
+  "freelance": "available",
+  "adress": "S.Korea Daegu",
+  "language": ["Uzbek", "Korean", "English"],
+  "skills": ["HTML", "CSS", "JS", "React"],
+  "extra_skills": [
+    "Bootstrap,Materialize",
+    "Styling,Sass",
+    "Django,Flask",
+    "Git Knowledge"
+  ],
+  "work_place": "It company",
+  "service_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odit tempora vel doloremque voluptatibus commodi corporis molestias corrupti, nostrum odio cupiditate rerum facere ullam veritatis aperiam repellendus blanditiis. Blanditiis temporibus perferendis illum consectetur ipsum? Eos dolores fugit nesciunt ducimus excepturi.",
+  "about_me": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odit tempora vel doloremque voluptatibus commodi corporis molestias corrupti, nostrum odio cupiditate ",
+  "city": "Tashkent",
+  "title": ["Flower", "Seedlings", "Gardner", "Old", "Nev"],
+  "flower_desc": [
+    "What is a Flower?",
+    "What is a Seedlings",
+    "Who is Gardner "
+  ],
+  "flower_name": [
+    "Tulip",
+    "Daffodil",
+    "Poppy",
+    "Sunflower",
+    "Bluebell",
+    "Rose",
+    "Snowdrop",
+    "Cherry",
+    "blossom"
+  ],
+  "flower_price": [
+    "15$",
+    "25$",
+    "35$",
+    "20$",
+    "12$",
+    "45$",
+    "19$",
+    "33$",
+    "40$"
+  ],
+  "famous_words": ["World is Beautiful with Flower"],
+  "famous_name": ["Vito"]
+}
