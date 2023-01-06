@@ -1,21 +1,16 @@
+// F-Task
 console.log("Train js ishga tushdi");
 
-// E-Task
+function findDoubler(str) {
+  let newstr = str.split("");
 
-// function calculator(a, b, c) {
-//   if (b == "/" && c == 0) {
-//     return "not valid to operate";
-//   } else if (b == "*") {
-//     return a * c;
-//   } else if (b == "/") {
-//     return a / c;
-//   } else if (b == "+") {
-//     return a + c;
-//   } else if (b == "-") {
-//     return a - c;
-//   }
-// }
+  let res = newstr.map((value, i) => {
+    if (value.includes(newstr[i + 1])) return true;
+    else false;
+  });
 
-// const result = calculator(0, "/", 0);
+  return res.includes(true);
+}
 
-// console.log(result);
+let result = findDoubler("hello");
+console.log(result);
