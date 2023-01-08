@@ -1,16 +1,35 @@
-// F-Task
 console.log("Train js ishga tushdi");
+// G-Task
 
-function findDoubler(str) {
-  let newstr = str.split("");
+const num = [2, 1, 200, 30, 3, 30];
 
-  let res = newstr.map((value, i) => {
-    if (value.includes(newstr[i + 1])) return true;
-    else false;
+function findBig(num) {
+  let res = [];
+
+  num.forEach((val) => {
+    if (val > res) res = val;
   });
 
-  return res.includes(true);
+  return num.indexOf(res);
 }
 
-let result = findDoubler("hello");
-console.log(result);
+console.log(findBig(num));
+
+// F-task==================================================
+
+// function findDoubler(str) {
+//   let newstr = str.split("");
+
+//   let res = newstr.map((value, i) => {
+//     if (value.includes(newstr[i + 1])) return true;
+//     else false;
+//   });
+
+//   return res.includes(true);
+// }
+
+// let result = findDoubler("hello");
+// console.log(result);
+
+// ===========================================================
+// challenge
