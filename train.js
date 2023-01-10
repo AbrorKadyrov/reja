@@ -1,19 +1,20 @@
 console.log("Train js ishga tushdi");
+
 // G-Task
 
-const num = [2, 1, 200, 30, 3, 30];
+// const num = [2, 1, 200, 30, 3, 30];
 
-function findBig(num) {
-  let res = [];
+// function findBig(num) {
+//   let res = [];
 
-  num.forEach((val) => {
-    if (val > res) res = val;
-  });
+//   num.forEach((val) => {
+//     if (val > res) res = val;
+//   });
 
-  return num.indexOf(res);
-}
+//   return num.indexOf(res);
+// }
 
-console.log(findBig(num));
+// console.log(findBig(num));
 
 // F-task==================================================
 
