@@ -50,14 +50,24 @@
             >
               Change
             </button>
-            <div class="btn btn-danger" style="border-radius: 10px">
-              <button data-id="<%=item._id%>" class="btn">Delete All</button>
-            </div>
+
+            <button
+              data-id="<%=item._id%>"
+              class="delete-me btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
           </div>
         </li>
 
         <% }) %>
       </ul>
+
+      <button id="clean-all" class="btn btn-danger" style="border-radius: 10px">
+        Delete All
+      </button>
     </div>
+
+    <script src="/browser.js"></script>
   </body>
 </html>
