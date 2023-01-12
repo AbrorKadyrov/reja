@@ -1,4 +1,11 @@
 console.log("Train js ishga tushdi");
+// H-Task
+
+function reverseString(str) {
+  return str.split("").reverse("").join("");
+}
+
+console.log(reverseString("javascript"));
 
 // G-Task
 
