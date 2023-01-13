@@ -47,7 +47,7 @@ document.addEventListener("click", function (e) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {
@@ -55,4 +55,35 @@ document.addEventListener("click", function (e) {
         });
     }
   }
+  // EDIT OPER
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "Ozgartirish kiring",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((res) => {
+          // console.log(res.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harakat qiling");
+        });
+    }
+  }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((res) => {
+    console.log("res......", res);
+    alert(res.data.state);
+    document.location.reload();
+  });
 });

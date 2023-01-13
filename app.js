@@ -1,6 +1,15 @@
 const express = require("express");
-
 const app = express();
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 // MongoDb chaqirish
 const db = require("./server").db();
@@ -41,6 +50,27 @@ app.post("/delete-item", (req, res) => {
       res.json({ state: "success" });
     }
   );
+});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { reja: data.new_input } },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+app.post("/delete-all", (req, res) => {
+  console.log("req....", req);
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar ochirildi" });
+    });
+  }
 });
 
 app.get("/", function (req, res) {
