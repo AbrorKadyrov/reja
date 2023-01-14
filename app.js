@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+let a = 0;
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -54,7 +55,6 @@ app.post("/delete-item", (req, res) => {
 
 app.post("/edit-item", (req, res) => {
   const data = req.body;
-  console.log(data);
   db.collection("plans").findOneAndUpdate(
     { _id: new mongodb.ObjectId(data.id) },
     { $set: { reja: data.new_input } },
@@ -65,7 +65,6 @@ app.post("/edit-item", (req, res) => {
 });
 
 app.post("/delete-all", (req, res) => {
-  console.log("req....", req);
   if (req.body.delete_all) {
     db.collection("plans").deleteMany(function () {
       res.json({ state: "hamma rejalar ochirildi" });
@@ -74,7 +73,8 @@ app.post("/delete-all", (req, res) => {
 });
 
 app.get("/", function (req, res) {
-  console.log("user entered /");
+  a++;
+  console.log("user entered /", a);
   db.collection("plans")
     .find()
     .toArray((err, data) => {

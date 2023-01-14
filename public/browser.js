@@ -47,7 +47,6 @@ document.addEventListener("click", function (e) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((res) => {
-          // console.log(res.data);
           e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {
@@ -68,7 +67,6 @@ document.addEventListener("click", function (e) {
           new_input: userInput,
         })
         .then((res) => {
-          // console.log(res.data);
           e.target.parentElement.parentElement.querySelector(
             ".item-text"
           ).innerHTML = userInput;
@@ -82,7 +80,6 @@ document.addEventListener("click", function (e) {
 
 document.getElementById("clean-all").addEventListener("click", function () {
   axios.post("/delete-all", { delete_all: true }).then((res) => {
-    console.log("res......", res);
     alert(res.data.state);
     document.location.reload();
   });

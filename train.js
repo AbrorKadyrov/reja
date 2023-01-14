@@ -1,11 +1,22 @@
 console.log("Train js ishga tushdi");
-// H-Task
 
-function reverseString(str) {
-  return str.split("").reverse("").join("");
+// I-task
+
+function getPositive(num) {
+  const arr = num.filter((val) => val > 0);
+  return arr;
 }
 
-console.log(reverseString("javascript"));
+const result = getPositive([0, -15, 5, -3, 2, -8, 9, -11]);
+console.log(result);
+
+// H-Task
+
+// function reverseString(str) {
+//   return str.split("").reverse("").join("");
+// }
+
+// console.log(reverseString("javascript"));
 
 // G-Task
 
