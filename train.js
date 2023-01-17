@@ -1,4 +1,12 @@
 console.log("Train js ishga tushdi");
+// J- task
+function number(num) {
+  if (num == 0) return 0;
+  else if (num < 0) return -1;
+  else return 1;
+}
+
+console.log(number(-12));
 
 // I - task;
 
