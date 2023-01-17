@@ -1,14 +1,14 @@
 console.log("Train js ishga tushdi");
 
-// I-task
+// I - task;
 
-function getPositive(num) {
-  const arr = num.filter((val) => val > 0);
-  return arr;
-}
+// function getPositive(num) {
+//   const arr = num.filter((val) => val > 0);
+//   return arr;
+// }
 
-const result = getPositive([0, -15, 5, -3, 2, -8, 9, -11]);
-console.log(result);
+// const result = getPositive([0, -15, 5, -3, 2, -8, 9, -11]);
+// console.log(result);
 
 // H-Task
 
@@ -51,4 +51,3 @@ console.log(result);
 // console.log(result);
 
 // ===========================================================
-// challenge

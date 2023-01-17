@@ -31,6 +31,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       document
         .getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
+
       createField.value = "";
       createField.focus();
     })
